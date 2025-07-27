@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: #151515;
+  background-color: #ffffff;
   font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
@@ -12,6 +12,22 @@ body {
   perspective: 1000px;
 }
 
+
+@keyframes rgb-glow {
+  0% {
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+  }
+  33% {
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
+  }
+  66% {
+    box-shadow: 0 0 15px rgba(0, 0, 255, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+  }
+}
+
 .booster-pack {
   width: 300px;
   height: 450px;
@@ -19,11 +35,10 @@ body {
   transform-style: preserve-3d;
   transition: transform 1s ease-in-out;
   cursor: pointer;
+  animation: rgb-glow 3s infinite linear;
+  border-radius: 16px;
 }
 
-.booster-pack.open {
-  transform: rotateY(180deg);
-}
 
 .front, .back {
   position: absolute;
@@ -32,7 +47,7 @@ body {
   backface-visibility: hidden;
   background-size: cover;
   border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .front {
@@ -43,3 +58,4 @@ body {
   background-image: url('../assets/images/booster-back.png');
   transform: rotateY(180deg);
 }
+
