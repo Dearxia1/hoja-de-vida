@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  background-color: #151515;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  perspective: 1000px;
+}
+
+.booster-pack {
+  width: 300px;
+  height: 450px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s ease-in-out;
+  cursor: pointer;
+}
+
+.booster-pack.open {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-size: cover;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.front {
+  background-image: url('../assets/images/booster-front.png');
+}
+
+.back {
+  background-image: url('../assets/images/booster-back.png');
+  transform: rotateY(180deg);
+}
