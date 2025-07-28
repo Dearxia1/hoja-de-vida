@@ -55,7 +55,7 @@ body {
 }
 
 .back {
-  background-image: url('../assets/images/booster-back.png');
+  background-image: url('../assets/images/reverse.svg');
   transform: rotateY(180deg);
 }
 
