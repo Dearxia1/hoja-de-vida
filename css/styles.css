@@ -96,3 +96,9 @@ body {
   transform: rotateY(180deg);
 }
 
+@media (max-width: 600px) {
+  .booster-pack {
+    width: 90vw;
+    height: calc(90vw * 1.33); /* mantener proporción 3:4 */
+  }
+}
