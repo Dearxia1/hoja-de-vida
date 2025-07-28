@@ -8,6 +8,8 @@ let lastY = 0;
 let currentRotateX = 0;
 let currentRotateY = 0;
 
+
+
 function updateVisibility() {
   // Normaliza el ángulo a [0, 360)
   let normalized = ((currentRotateY % 360) + 360) % 360;
@@ -51,3 +53,4 @@ document.addEventListener('mouseup', () => {
   booster.style.transform = `rotateY(${currentRotateY}deg) rotateX(0deg)`;
   updateVisibility();
 });
+

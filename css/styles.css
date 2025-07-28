@@ -1,12 +1,11 @@
 body {
   margin: 0;
-  background: radial-gradient(ellipse at 60% 40%, #fffbe6 0%, #ffe066 40%, #ffb300 100%, #222 120%);
-  background-color: #ffffff;
   font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-image: url('../assets/images/background.svg');
 }
 
 .container {
@@ -34,6 +33,7 @@ body {
   animation: invite-fade 0.5s infinite alternate;
 }
 
+
 @keyframes invite-fade {
   0% { opacity: 1; }
   100% { opacity: 0.5; }
@@ -54,6 +54,16 @@ body {
   }
 }
 
+@keyframes gentle-tilt {
+  0%   { transform: rotateY(-6deg) rotateX(3deg); }
+  25%  { transform: rotateY(4deg)  rotateX(-2deg);}
+  50%  { transform: rotateY(6deg)  rotateX(4deg); }
+  75%  { transform: rotateY(-4deg) rotateX(-3deg);}
+  100% { transform: rotateY(-6deg) rotateX(3deg); }
+}
+
+
+
 .booster-pack {
   width: 400px;
   height: 550px;
@@ -66,6 +76,7 @@ body {
   
 }
 
+
 .front, .back {
   position: absolute;
   width: 100%;
@@ -73,8 +84,6 @@ body {
   backface-visibility: hidden;
   background-size: cover;
   border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(255, 0, 0, 0.5);
-  
 }
 
 .front {
